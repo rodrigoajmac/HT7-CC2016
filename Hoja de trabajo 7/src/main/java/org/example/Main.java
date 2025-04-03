@@ -1,17 +1,48 @@
 package org.example;
 
+import java.util.Scanner;
+
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
         //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
         // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        Scanner scanner = new Scanner(System.in);
+        String filePath = "home appliance sku lowes.csv";
+        BinarySearchTree bst = ProductLoader.loadProducts(filePath);
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
+        while (true) {
+            System.out.println("\nSeleccione una opción:");
+            System.out.println("1. Buscar un producto por SKU");
+            System.out.println("2. Mostrar todos los productos ordenados por SKU");
+            System.out.println("3. Salir");
+            System.out.print("Opción: ");
+            int option = scanner.nextInt();
+            scanner.nextLine(); // Limpiar buffer
+
+            switch (option) {
+                case 1:
+                    System.out.print("Ingrese el SKU del producto: ");
+                    String sku = scanner.nextLine();
+                    Product product = bst.search(sku);
+                    if (product != null) {
+                        System.out.println("Producto encontrado: " + product);
+                    } else {
+                        System.out.println("Producto no encontrado.");
+                    }
+                    break;
+                case 2:
+                    System.out.println("Productos en orden ascendente:");
+                    bst.inorderTraversal();
+                    break;
+                case 3:
+                    System.out.println("Saliendo...");
+                    scanner.close();
+                    return;
+                default:
+                    System.out.println("Opción no válida. Intente de nuevo.");
+            }
         }
     }
 }
