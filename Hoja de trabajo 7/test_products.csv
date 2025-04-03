@@ -1,0 +1,3 @@
+CATEGORY,DATE_SCRAPED,SORT_BY,RUN_START_DATE,SUBCATEGORY,SHIPPING_LOCATION,SKU,COUNTRY,BRAND,PRICE_RETAIL,PRICE_CURRENT,SELLER,PRODUCT_URL,CURRENCY,BREADCRUMBS,DEPARTMENT,PROMOTION,BESTSELLER_RANK,PRODUCT_NAME,WEBSITE_URL
+Electronics,2025-04-01,Popular,2025-04-01,Headphones,USA,12345,USA,Sony,99.99,79.99,Amazon,https://example.com,USD,Audio > Headphones,Electronics,Discount,1,Sony Headphones,https://example.com
+Appliances,2025-04-01,Top Rated,2025-04-01,Refrigerators,USA,67890,USA,LG,1499.99,1299.99,BestBuy,https://example.com,USD,Home > Kitchen,Home,Sale,2,LG Fridge,https://example.com
