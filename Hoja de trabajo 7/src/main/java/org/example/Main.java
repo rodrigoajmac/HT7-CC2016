@@ -9,7 +9,7 @@ public class Main {
         //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
         // to see how IntelliJ IDEA suggests fixing it.
         Scanner scanner = new Scanner(System.in);
-        String filePath = "home appliance sku lowes.csv";
+        String filePath = "C:\\Users\\ajmac\\Documents\\Universidad\\Séptimo semestre\\Algoritmos y estructuras de datos\\HT7-CC2016\\Hoja de trabajo 7\\src\\main\\java\\org\\example\\home appliance skus lowes.csv";
         BinarySearchTree bst = ProductLoader.loadProducts(filePath);
 
         while (true) {
